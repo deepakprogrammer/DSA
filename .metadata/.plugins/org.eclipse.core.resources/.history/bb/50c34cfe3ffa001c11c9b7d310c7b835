@@ -1,0 +1,22 @@
+
+public class Solution {
+
+	public static void main(String[] args) {
+		int A = 943566;
+
+		StringBuilder title = new StringBuilder();
+		while (A > 0) {
+			int rem = A % 27;
+			char character = '0';
+	
+				character = (char) (64 + rem);
+		
+				//character = (char) 90;
+			title.append(character);
+			A /= 26;
+		}
+		System.out.println(title.reverse());
+
+	}
+
+}

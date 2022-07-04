@@ -1,0 +1,16 @@
+
+public class Solution {
+
+	public static void main(String[] args) {
+		String A = "218765";
+		/*
+		 * if (A == null || A.length() == 0) return "-1";
+		 */
+		StringBuilder copyString = new StringBuilder(A);
+		int length = A.length();
+		int i = length - 2;
+		while (i >= 0 && copyString.charAt(i) >= copyString.charAt(i + 1))
+			--i;
+	}
+
+}

@@ -1,0 +1,95 @@
+
+public class GFG {
+
+	public static void main(String[] args) {
+		String A = "AB";
+		int ExColNum = 0;
+		int length = A.length();
+		for (int i = length - 1; i >= 0; --i) {
+			char c = A.charAt(i);
+			switch (c) {
+			case 'A':
+				ExColNum += 1;
+				break;
+			case 'B':
+				ExColNum += 2;
+				break;
+			case 'C':
+				ExColNum += 3;
+				break;
+			case 'D':
+				ExColNum += 4;
+				break;
+			case 'E':
+				ExColNum += 5;
+				break;
+			case 'F':
+				ExColNum += 6;
+				break;
+			case 'G':
+				ExColNum += 7;
+				break;
+			case 'H':
+				ExColNum += 8;
+				break;
+			case 'I':
+				ExColNum += 9;
+				break;
+			case 'J':
+				ExColNum += 10;
+				break;
+			case 'K':
+				ExColNum += 11;
+				break;
+			case 'L':
+				ExColNum += 12;
+				break;
+			case 'M':
+				ExColNum += 13;
+				break;
+			case 'N':
+				ExColNum += 14;
+				break;
+			case 'O':
+				ExColNum += 15;
+				break;
+			case 'P':
+				ExColNum += 16;
+				break;
+			case 'Q':
+				ExColNum += 17;
+				break;
+			case 'R':
+				ExColNum += 18;
+				break;
+			case 'S':
+				ExColNum += 19;
+				break;
+			case 'T':
+				ExColNum += 20;
+				break;
+			case 'U':
+				ExColNum += 21;
+				break;
+			case 'V':
+				ExColNum += 22;
+				break;
+			case 'W':
+				ExColNum += 23;
+				break;
+			case 'X':
+				ExColNum += 24;
+				break;
+			case 'Y':
+				ExColNum += 25;
+				break;
+			case 'Z':
+				ExColNum += 26;
+				break;
+
+			}
+		}
+
+	}
+
+}

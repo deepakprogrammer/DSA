@@ -1,0 +1,40 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class GFG {
+
+	public static void main(String[] args) {
+		String A = "sadasdsasassasas";
+		final int mod = 1000003;
+		double rank = 0.0;
+		int length = A.length();
+		double[] facts = new double[length];
+		facts[0] = 1;
+		for (int i = 1; i < length; ++i)
+			facts[i] = facts[i - 1] * i;
+		for (int i = 0; i < length; ++i) {
+			int count = 0;
+			char ci = A.charAt(i);
+			for (int j = i + 1; j < length; ++j) {
+				char cj = A.charAt(j);
+				if (cj < ci)
+					++count;
+			}
+			Map<Character, Double> m = new HashMap<Character, Double>();
+			double repPro = 1.0;
+			for (int k = i; k < length; ++k) {
+				char ck = A.charAt(k);
+				if (m.containsKey(ck)) {
+					m.put(ck, m.get(ck) + 1);
+					repPro = repPro * m.get(ck);
+				} else
+					m.put(ck, 1.0);
+			}
+			if (count != 0)
+				rank = rank + count * facts[length - i - 1] / repPro;
+
+		}
+		System.out.println(rank + 1);
+	}
+
+}
